@@ -15,20 +15,20 @@ function KeyBoard() {
   this.body.on('click', function() {
     _this.hide();
   });
-  this.payZone.on('click', function() {
-    window.event.stopPropagation();
+  this.payZone.on('click', function(evt) {
+    evt.stopPropagation();
     _this.show();
   });
-  this.psZone.on('click', function() {
-    window.event.stopPropagation();
+  this.psZone.on('click', function(evt) {
+    evt.stopPropagation();
     _this.showPs();
   });
-  this.cleanDom.on('click', function() {
-    window.event.stopPropagation();
+  this.cleanDom.on('click', function(evt) {
+    evt.stopPropagation();
     _this.clean();
   });
-  _this.board.on('click', 'i', function() {
-    window.event.stopPropagation();
+  _this.board.on('click', 'i', function(evt) {
+    evt.stopPropagation();
     const num = $(this).data('num');
     switch (num) {
       case 'del':
