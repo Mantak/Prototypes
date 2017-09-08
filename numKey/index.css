@@ -1,0 +1,202 @@
+body {
+  font-family: Hiragino Sans GB, Heiti SC, "微软雅黑", Verdana, sans-serif, SimHei, "黑体";
+  background-color: #E5E5E5;
+}
+#page {
+  width: 100%;
+  height: 100%;
+}
+#pay-board, #pay-board *{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+}
+#pay-board.show {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+#pay-board:after{
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+#pay-board.show-trans {
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+#pay-board {
+  width: 100%;
+  height: 240px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background-color: #FFF;
+  z-index: 999;
+  color: #333;
+  font-size: 30px;
+  line-height: 60px;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+#pay-board i {
+  display: block;
+  width: 25%;
+  height: 25%;
+  line-height: 60px;
+  font-size: inherit;
+  color: inherit;
+  text-align: center;
+  border: 2px solid #E5E5E5;
+  border-left: none;
+  border-bottom: none;
+  transition: all 0.1s;
+  float: left;
+  position: relative;
+}
+#pay-board i:nth-child(1),
+#pay-board i:nth-child(6),
+#pay-board i:nth-child(9),
+#pay-board i:nth-child(12) {
+  border-left: 2px solid transparent;
+}
+#pay-board i >img {
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+#pay-board i.pay-btn {
+  float: right;
+  height: 180px;
+  line-height: 1.2;
+  background-color: #CCC;
+  color: #FFF;
+  font-size: 35px;
+  padding: 0px 20px;
+  border: none;
+  display: -webkit-box;
+  box-align: center;
+  -webkit-box-align: center;
+  box-pack: center;
+  -webkit-box-pack: center;
+}
+#pay-board i.double-width{
+  width: 50%;
+}
+#pay-board i.no-right {
+  border-right: none;
+}
+#pay-board i.hover, #pay-board i:active {
+  background-color: #EBEBEB;
+}
+#pay-board i.pay-btn.active {
+  background-color: #00C3CD;
+}
+#pay-board i.pay-btn.active.hover, #pay-board i.pay-btn.active:active {
+  background-color: #0FF;
+}
+
+#pay-title {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#pay-input-zone {
+  position: relative;
+  padding: 10px;
+  border:1px solid #CCC;
+  border-radius: 8px;
+  background-color: #FFF;
+}
+#pay-input-title {
+  padding-top: 10px;
+  padding-left: 5px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+#pay-input {
+  height: 100px;
+  font-size: 50px;
+}
+
+#pay-input:before {
+  content: '￥';
+  font-size: 35px;
+  color: #CCC;
+  line-height: 130px;
+}
+
+#pay-input-clean {
+  position: absolute;
+  top: 100px;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+#pay-input-clean img{
+  height: 30px;
+  width: 30px;
+}
+
+#ps-input-zone {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.ps-input-zone {
+  border:1px solid #CCC;
+  border-radius: 8px;
+  background-color: #FFF;
+}
+
+#ps-tips {
+  top: 0;
+  right: 0;
+  color: #0086E0;
+  position: absolute;
+}
+
+#ps-input {
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  display: none;
+}
+
+#copyright {
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+  margin-top: -60px;
+}
